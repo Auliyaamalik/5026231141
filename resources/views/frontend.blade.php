@@ -60,7 +60,7 @@
             <a href="http://127.0.0.1:8000/linktree" class="btn btn-outline-light btn-lg btn-block" target="_blank">linktree</a>
         </div>
         <div class="col-6 col-md-3 mb-3">
-            <a href="http://127.0.0.1:8000/index" class="btn btn-outline-light btn-lg btn-block" target="_blank">ETS</a>
+            <a href="http://127.0.0.1:8000/ets" class="btn btn-outline-light btn-lg btn-block" target="_blank">ETS</a>
         </div>
     </div>
     </div>

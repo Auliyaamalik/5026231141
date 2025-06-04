@@ -1,26 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('template')
+@section('content')
+    <h3>Data Pegawai</h3>
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Pegawai</h3>
+    <a href="/pegawai" class="btn btn-info"> Kembali</a>
 
-	<a href="/pegawai"> Kembali</a>
+    <br />
+    <br />
 
-	<br/>
-	<br/>
+    <form action="/pegawai/store" method="post" class="form-horizontal">
+        {{ csrf_field() }}
+        <div class="form-group has-success">
+            <label class="control-label col-sm-2" for="nama">
+                Nama
+            </label>
+            <div class="col-sm-6">
+                <input class="form-control" type="text" id="nama" placeholder="Masukkan Nama Lengkap" name="nama"
+                    required="required">
+            </div>
+        </div>
 
-	<form action="/pegawai/store" method="post">
-		{{ csrf_field() }}
-		Nama <input type="text" name="nama" required="required"> <br/>
-		Jabatan <input type="text" name="jabatan" required="required"> <br/>
-		Umur <input type="number" name="umur" required="required"> <br/>
-		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
+        <div class="form-group has-success">
+            <label class="control-label col-sm-2" for="jabatan">
+                Jabatan
+            </label>
+            <div class="col-sm-6">
+                <input class="form-control" type="text" id="jabatan" placeholder="Masukkan Jabatan Anda" name="jabatan"
+                    required="required">
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="form-group has-success">
+            <label class="control-label col-sm-2" for="umur">
+                Umur
+            </label>
+            <div class="col-sm-6">
+                <input class="form-control" type="text" id="umur" placeholder="Masukkan Umur Anda" name="umur"
+                    required="required">
+            </div>
+        </div>
+
+        <div class="form-group has-success">
+            <label class="control-label col-sm-2" for="alamat">
+                Alamat
+            </label>
+            <div class="col-sm-6">
+                <textarea class="form-control" type="text" id="alamat" placeholder="Masukkan Alamat Anda" name="alamat"
+                    required="required"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="Simpan Data" class="btn btn-success">
+    </form>
+@endsection

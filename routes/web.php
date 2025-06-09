@@ -5,6 +5,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\ProcessorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +100,12 @@ Route::get('/pegawai/edit/{id}', [PegawaiDBController::class,'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class,'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class,'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class,'cari']);
+
+// crud processor
+Route::get('/processor', [ProcessorController::class,'index2']);
+Route::get('/processor/tambah', [ProcessorController::class,'tambah2']);
+Route::post('/processor/store', [ProcessorController::class,'store']);
+Route::get('/processor/edit/{id}', [ProcessorController::class,'edit2']);
+Route::post('/processor/update', [ProcessorController::class,'update']);
+Route::get('/processor/hapus/{id}',[ProcessorController::class,'hapus']);
+Route::get('/processor/cari',[ProcessorController::class,'cari']);

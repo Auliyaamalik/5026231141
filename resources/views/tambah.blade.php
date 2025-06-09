@@ -2,7 +2,7 @@
 @section('content')
     <h3>Data Pegawai</h3>
 
-    <a href="/pegawai" class="btn btn-info"> Kembali</a>
+    <a href="/pegawai" class="btn" style="background-color: #efb7c0; color:white; border-radius: 10px"> Kembali</a>
 
     <br />
     <br />
@@ -49,6 +49,6 @@
             </div>
         </div>
 
-        <input type="submit" value="Simpan Data" class="btn btn-success">
+        <input type="submit" value="Simpan Data" class="btn" style="background-color: #fffde6; color: #ff96a6; border-color: #ff96a6; border-radius: 10px">
     </form>
 @endsection

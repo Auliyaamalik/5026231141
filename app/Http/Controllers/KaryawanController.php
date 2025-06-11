@@ -8,23 +8,23 @@ use Illuminate\Support\Facades\DB;
 class KaryawanController extends Controller
 {
     //
-    public function index()
+    public function index4()
     {
         // mengambil data dari table karyawan
         //$karyawan = DB::table('karyawan')->get(); //array all record
         $karyawan = DB::table('karyawan')->paginate(10);
 
     	// mengirim data karyawan ke view index
-        return view('index',['karyawan' => $karyawan]);
+        return view('index4',['karyawan' => $karyawan]);
 
     }
 
     // method untuk menampilkan view form tambah karyawan
-    public function tambah()
+    public function tambah4()
     {
 
         // memanggil view tambah
-        return view('tambah');
+        return view('tambah4');
     }
 
     // method untuk insert data ke table karyawan
@@ -32,10 +32,10 @@ class KaryawanController extends Controller
     {
         // insert data ke table karyawan
         DB::table('karyawan')->insert([
-            'karyawan_nama' => $request->nama,
-            'karyawan_jabatan' => $request->jabatan,
-            'karyawan_umur' => $request->umur,
-            'karyawan_alamat' => $request->alamat
+            'kodepegawai' => $request->kode,
+            'namalengkap' => $request->nama,
+            'divisi' => $request->divisi,
+            'departemen' => $request->departemen
         ]);
         // alihkan halaman ke halaman karyawan
         return redirect('/karyawan');
@@ -56,7 +56,7 @@ class KaryawanController extends Controller
     public function edit($id) // ada primary key
     {
         // mengambil data karyawan berdasarkan id yang dipilih
-        $karyawan = DB::table('karyawan')->where('karyawan_id',$id)->get();
+        $karyawan = DB::table('karyawan')->where('kodepegawai',$id)->get();
         // passing data karyawan yang didapat ke view edit.blade.php
         return view('edit',['karyawan' => $karyawan]);
 
@@ -66,11 +66,11 @@ class KaryawanController extends Controller
     public function update(Request $request)
     {
         // update data karyawan
-        DB::table('karyawan')->where('karyawan_id',$request->id)->update([
-            'karyawan_nama' => $request->nama,
-            'karyawan_jabatan' => $request->jabatan,
-            'karyawan_umur' => $request->umur,
-            'karyawan_alamat' => $request->alamat
+        DB::table('karyawan')->where('kodepegawai',$request->id)->update([
+            'kodepegawai' => $request->kode,
+            'namalengkap' => $request->nama,
+            'divisi' => $request->divisi,
+            'departemen' => $request->departemen
         ]);
         // alihkan halaman ke halaman karyawan
         return redirect('/karyawan');
@@ -80,7 +80,7 @@ class KaryawanController extends Controller
     public function hapus($id)
     {
         // menghapus data karyawan berdasarkan id yang dipilih
-        DB::table('karyawan')->where('karyawan_id',$id)->delete();
+        DB::table('karyawan')->where('kodepegawai',$id)->delete();
 
         // alihkan halaman ke halaman karyawan
         return redirect('/karyawan');
@@ -94,11 +94,11 @@ class KaryawanController extends Controller
 
     		// mengambil data dari table karyawan sesuai pencarian data
 		$karyawan = DB::table('karyawan')
-		->where('karyawan_nama','like',"%".$cari."%")
+		->where('namalengkap','like',"%".$cari."%")
 		->paginate();
 
     		// mengirim data karyawan ke view index
-		return view('index',['karyawan' => $karyawan]);
+		return view('index4',['karyawan' => $karyawan]);
 
 	}
 }

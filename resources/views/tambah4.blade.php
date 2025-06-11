@@ -10,6 +10,16 @@
     <form action="/karyawan/store" method="post" class="form-horizontal">
         {{ csrf_field() }}
         <div class="form-group has-success">
+            <label class="control-label col-sm-2" for="kode">
+                Kode Pegawai
+            </label>
+            <div class="col-sm-6">
+                <input class="form-control" type="text" id="kode" placeholder="Masukkan Kode Pegawai" name="kode"
+                    required="required">
+            </div>
+        </div>
+
+        <div class="form-group has-success">
             <label class="control-label col-sm-2" for="nama">
                 Nama Lengkap
             </label>

@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\ProcessorController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\LatihanA1Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,11 +120,13 @@ Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class,'store
 Route::post('/keranjangbelanja/update', [KeranjangBelanjaController::class,'update']);
 Route::get('/keranjangbelanja/hapus/{id}',[KeranjangBelanjaController::class,'hapus']);
 
-// crud processor
+// crud karyawan
 Route::get('/karyawan', [KaryawanController::class,'index4']);
 Route::get('/karyawan/tambah', [KaryawanController::class,'tambah4']);
 Route::post('/karyawan/store', [KaryawanController::class,'store']);
-Route::get('/karyawan/edit/{id}', [KaryawanController::class,'edit4']);
 Route::post('/karyawan/update', [KaryawanController::class,'update']);
 Route::get('/karyawan/hapus/{id}',[KaryawanController::class,'hapus']);
 Route::get('/karyawan/cari',[KaryawanController::class,'cari']);
+
+// crud latihanA1
+Route::get('/latihanA1', [LatihanA1Controller::class,'index5']);

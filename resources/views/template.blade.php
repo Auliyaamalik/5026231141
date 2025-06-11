@@ -58,37 +58,37 @@
         border-radius: 8px; /* Sudut membulat */
         margin: 0 4px; /* Jarak antar item pagination */
         background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan */
-    }
+        }
 
-    .page-item.active .page-link {
-        background-color: #ff96a6 !important; /* Hot Pink - Warna latar belakang untuk halaman aktif */
-        border-color: #ff96a6 !important; /* Border warna yang sama dengan background */
-        color: white !important; /* Warna teks putih untuk halaman aktif */
-    }
+        .page-item.active .page-link {
+            background-color: #ff96a6 !important; /* Hot Pink - Warna latar belakang untuk halaman aktif */
+            border-color: #ff96a6 !important; /* Border warna yang sama dengan background */
+            color: white !important; /* Warna teks putih untuk halaman aktif */
+        }
 
-    .page-item.disabled .page-link {
-        color: #ccc; /* Warna teks abu-abu untuk link yang dinonaktifkan */
-        pointer-events: none; /* Mencegah klik */
-        background-color: rgba(255, 255, 255, 0.7); /* Latar belakang sedikit lebih transparan */
-    }
+        .page-item.disabled .page-link {
+            color: #ccc; /* Warna teks abu-abu untuk link yang dinonaktifkan */
+            pointer-events: none; /* Mencegah klik */
+            background-color: rgba(255, 255, 255, 0.7); /* Latar belakang sedikit lebih transparan */
+        }
 
-    .page-item .page-link:hover {
-        background-color: #FFE4E1; /* Misty Rose - Warna hover (pink sangat muda) */
-        border-color: #ff96a6; /* Border Hot Pink saat hover */
-        color: #CD5C5C; /* Indian Red - Warna teks saat hover */
-    }
+        .page-item .page-link:hover {
+            background-color: #FFE4E1; /* Misty Rose - Warna hover (pink sangat muda) */
+            border-color: #ff96a6; /* Border Hot Pink saat hover */
+            color: #CD5C5C; /* Indian Red - Warna teks saat hover */
+        }
 
-    /* Ini memastikan sudut membulat di ujung pagination jika tanpa margin */
-    /* Jika Anda punya margin: 0 4px; di .page-item .page-link, ini mungkin tidak terlalu terlihat */
-    .pagination .page-item:first-child .page-link {
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-    }
+        /* Ini memastikan sudut membulat di ujung pagination jika tanpa margin */
+        /* Jika Anda punya margin: 0 4px; di .page-item .page-link, ini mungkin tidak terlalu terlihat */
+        .pagination .page-item:first-child .page-link {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
 
-    .pagination .page-item:last-child .page-link {
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-    }
+        .pagination .page-item:last-child .page-link {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
 
     </style>
 </head>
@@ -119,7 +119,7 @@
                 <a class="nav-link" href="/karyawan">Latihan 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
+                <a class="nav-link" href="/latihanA1">Latihan 3</a>
             </li>
         </ul>
     </nav>

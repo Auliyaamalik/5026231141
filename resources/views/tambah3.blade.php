@@ -1,6 +1,6 @@
 @extends('template')
 @section('content')
-    <h3>Data Keranjang</h3>
+    <h3>Beli Apa?</h3>
 
     <a href="/keranjangbelanja" class="btn" style="background-color: #efb7c0; color:white; border-radius: 10px"> Kembali</a>
 

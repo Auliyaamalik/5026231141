@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
 
-	<h3>Data Keranjang</h3>
+	<h3>Keranjang Belanja</h3>
     <br/><br/>
 
 	<table class="table table-stripped">

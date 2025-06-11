@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\ProcessorController;
+use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,3 +111,19 @@ Route::get('/processor/edit/{id}', [ProcessorController::class,'edit2']);
 Route::post('/processor/update', [ProcessorController::class,'update']);
 Route::get('/processor/hapus/{id}',[ProcessorController::class,'hapus']);
 Route::get('/processor/cari',[ProcessorController::class,'cari']);
+
+// crud keranjang belanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class,'index3']);
+Route::get('/keranjangbelanja/tambah', [KeranjangBelanjaController::class,'tambah3']);
+Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class,'store']);
+Route::post('/keranjangbelanja/update', [KeranjangBelanjaController::class,'update']);
+Route::get('/keranjangbelanja/hapus/{id}',[KeranjangBelanjaController::class,'hapus']);
+
+// crud processor
+Route::get('/karyawan', [KaryawanController::class,'index4']);
+Route::get('/karyawan/tambah', [KaryawanController::class,'tambah4']);
+Route::post('/karyawan/store', [KaryawanController::class,'store']);
+Route::get('/karyawan/edit/{id}', [KaryawanController::class,'edit4']);
+Route::post('/karyawan/update', [KaryawanController::class,'update']);
+Route::get('/karyawan/hapus/{id}',[KaryawanController::class,'hapus']);
+Route::get('/karyawan/cari',[KaryawanController::class,'cari']);

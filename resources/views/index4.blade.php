@@ -34,6 +34,5 @@
     <div class="d-flex justify-content-center">
         <a href="/karyawan/tambah" class="btn" style="background-color: #FFB6C1; color:white"> + Tambah Karyawan Baru</a>
     </div>
-    {{ $karyawan->links()}}
 
 @endsection

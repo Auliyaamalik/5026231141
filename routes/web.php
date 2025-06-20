@@ -9,6 +9,7 @@ use App\Http\Controllers\ProcessorController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\LatihanA1Controller;
+use App\Http\Controllers\MyKaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -130,3 +131,12 @@ Route::get('/karyawan/cari',[KaryawanController::class,'cari']);
 
 // crud latihanA1
 Route::get('/latihanA1', [LatihanA1Controller::class,'index5']);
+
+// crud EAS
+Route::get('/mykaryawan', [MyKaryawanController::class,'index6']);
+Route::post('/mykaryawan/store', [MyKaryawanController::class,'store']);
+Route::post('/mykaryawan/update', [MyKaryawanController::class,'update']);
+Route::get('/mykaryawan/hapus/{id}',[MyKaryawanController::class,'hapus']);
+Route::get('/mykaryawan/edit/{id}', [MyKaryawanController::class,'edit6']);
+Route::get('/mykaryawan/cari',[MyKaryawanController::class,'cari']);
+Route::get('/mykaryawan/view/{id}', [MyKaryawanController::class,'view']);
